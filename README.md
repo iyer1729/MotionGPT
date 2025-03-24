@@ -1,4 +1,4 @@
-#Generative-AI-Enabled Human Motion Simulation (G-AI-HMS)
+# Generative-AI-Enabled Human Motion Simulation (G-AI-HMS)
 
 This forked copy of MotionGPT is customized to produce simulated task motions with G-AI-HMS. We would like to gratefully acknowledge the original authors of MotionGPT:
 
