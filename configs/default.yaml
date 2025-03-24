@@ -42,7 +42,7 @@ TEST:
   REP_I: 0 # For counting replication times
 
 model:
-  target: mGPT.models.mgpt.MotionGPT
+  target: mGPT.models.mgpt.motiongpt
   params:
     condition: 'text'
     task: 't2m'
@@ -105,7 +105,7 @@ DATASET:
     STD_TEXT: False
 
 ABLATION:
-  # For MotionGPT
+  # For motiongpt
   use_length: False
   predict_ratio: 0.2
   inbetween_ratio: 0.25

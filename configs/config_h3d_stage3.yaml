@@ -12,7 +12,7 @@ TRAIN:
   END_EPOCH: 999999 # End epoch
   RESUME: '' # Resume training from this path
   PRETRAINED: '' # Preatrained model path
-  PRETRAINED_VAE: checkpoints/MotionGPT-base/motiongpt_s3_h3d.tar # Vae model path
+  PRETRAINED_VAE: checkpoints/motiongpt-base/motiongpt_s3_h3d.tar # Vae model path
 
   OPTIM:
     target: AdamW
@@ -27,7 +27,7 @@ EVAL:
   SPLIT: test
 
 TEST:
-  CHECKPOINTS: checkpoints/MotionGPT-base/motiongpt_s3_h3d.tar
+  CHECKPOINTS: checkpoints/motiongpt-base/motiongpt_s3_h3d.tar
   # CHECKPOINTS: /apdcephfs/share_1227775/billljiang/memData/experiments/gpt0/0514_Instruct_T5BASE_HumanML3D/checkpoints/epoch=119.tar
   SPLIT: test
   BATCH_SIZE: 32 # training Batch size
@@ -48,7 +48,7 @@ LOSS:
     RECONS_LOSS: 'l1_smooth'
 
 model:
-  target: mGPT.models.mgpt.MotionGPT
+  target: mGPT.models.mgpt.motiongpt
   params:
     condition: 'text'
     task: 't2m'

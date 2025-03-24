@@ -7,7 +7,7 @@ TRAIN:
   BATCH_SIZE: 16
   END_EPOCH: 999999
   RESUME: ''
-  PRETRAINED_VAE: checkpoints/MotionGPT-base/motiongpt_s3_h3d.tar
+  PRETRAINED_VAE: checkpoints/motiongpt-base/motiongpt_s3_h3d.tar
   PRETRAINED: ''
   OPTIM:
     target: AdamW
@@ -28,7 +28,7 @@ EVAL:
   BATCH_SIZE: 32
   NUM_WORKERS: 8
 TEST:
-  CHECKPOINTS: checkpoints/MotionGPT-base/motiongpt_s3_h3d.tar
+  CHECKPOINTS: checkpoints/motiongpt-base/motiongpt_s3_h3d.tar
   SPLIT: test
   BATCH_SIZE: 32
   NUM_WORKERS: 8
@@ -38,7 +38,7 @@ TEST:
   REP_I: 0
   FOLDER: results
 model:
-  target: mGPT.models.mgpt.MotionGPT
+  target: mGPT.models.mgpt.motiongpt
   params:
     condition: text
     task: t2m
@@ -249,4 +249,4 @@ RENDER:
   MODEL_PATH: deps/smpl/smpl_models/
   FACES_PATH: deps/smplh/smplh.faces
 FOLDER_EXP: results/mgpt/debug--Instruct_HumanML3D
-TIME: 2025-03-23-15-11-37
+TIME: 2025-03-23-17-34-34
